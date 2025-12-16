@@ -1,0 +1,77 @@
+p {
+    font-family: "Shadows Into Light", cursive;
+    font-size: 28px;
+}
+
+h1 {
+    font-family: "Caveat Brush", cursive;
+    margin: 0px;
+    font-size: 42px;
+}
+
+h2 {
+    font-family: "Caveat Brush", cursive;
+    margin: 0px;
+    font-size: 30px;
+}
+
+.profile_picture {
+    border-radius: 2%;
+    width: 100%;
+    transform: rotate(-4deg);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.left_column {
+    width: 25%;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 0px;
+}
+
+.left_column .extra_padding {
+    padding-left: 40px;
+}
+
+.center_contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.right_column {
+    width: 75%;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-right: 40px;
+}
+
+.about_me {
+    background-image: url('../about-me-2.png');
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    min-height: 434px;
+}
+
+.right_column .extra_30_padding {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.skills {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.curved-heading {
+    border-radius: 8px;
+    border: none;
+    background-color: blue; 
+    width: 100%;
+}
