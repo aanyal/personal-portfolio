@@ -27,12 +27,26 @@
 <div class="container">
     <div class="left_column">
         <div class="extra_padding"> 
-            <p style="padding">December 16th, 2025</p>
+            <p>December 16th, 2025</p>
         </div>
 
-        <div class="center_contents">
-            <img src="profile-picture(1).png" alt="profile" class="profile_picture">
+        <div class="extra_padding">
+            <img src="profile_picture(3).jpeg" alt="profile" class="profile_picture">
         </div>
+
+        <br>
+
+        <div class="extra_padding"> 
+            <h1 style="padding-bottom: 0px;">Aanya Lakhani</h1>
+            <p style="margin-top: 0px;">Web Developer</p>
+
+            <br/>
+            <p style="margin: 0px;">--- Skills</p>
+            <p style="margin: 0px;">--- Education</p>
+            <p style="margin: 0px;">--- Experience</p>
+            <p style="margin: 0px;">--- Projects</p>
+        </div>
+
     </div>
 
     <div class="right_column">
@@ -40,36 +54,40 @@
             <h1>Hello World!</h1>
         </div>
 
-        <img src="../about-me-4.png" alt="about me" style="width: 100%">
+        <div class="center_contents">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. D</p>
+        </div>
 
-        <div class="extra_30_padding">
-            <div class="skills">
-                <div class="curved-heading">
-                    <h2 style="color: white; padding: 3px 20px 3px 20px"> Skills </h2>
-                </div>
-                
-                <div style="padding: 20px 20px 20px 20px; background-color: white; border-radius: 8px;">
-                    {#each chunckedSkillEnteries as skillChunk, i}
-                        <div class="container">
+        <hr />
+        <br>
+        <br>
 
-                        {#each skillChunk as [key, value], i}
-                            <SkillsPreview 
-                                logo_link={value.logo}
-                                skill_name={value.name}
-                                skill_experience={value.experience}
-                            />
-                            {#if i%2 == 0}
-                                <div style="width:80px"></div>
-                            {/if}
-                        {/each}
-                        
-                        {#if i < chunckedSkillEnteries.length-1}
-                            <div style="height:80px"></div>
+        <div class="skills">
+            <div class="curved-heading">
+                <h2 style="color: white; padding: 3px 20px 3px 20px"> Technical Skills </h2>
+            </div>
+            
+            <div style="padding: 20px 20px 20px 20px; border-radius: 8px;">
+                {#each chunckedSkillEnteries as skillChunk, i}
+                    <div class="container">
+
+                    {#each skillChunk as [key, value], i}
+                        <SkillsPreview 
+                            logo_link={value.logo}
+                            skill_name={value.name}
+                            skill_experience={value.experience}
+                        />
+                        {#if i%2 == 0}
+                            <div style="width:80px"></div>
                         {/if}
-                            
-                        </div>
                     {/each}
-                </div>
+                    
+                    {#if i < chunckedSkillEnteries.length-1}
+                        <div style="height:80px"></div>
+                    {/if}
+                        
+                    </div>
+                {/each}
             </div>
         </div>
     </div>

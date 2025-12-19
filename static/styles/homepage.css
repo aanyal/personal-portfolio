@@ -5,10 +5,11 @@ p {
 }
 
 h1 {
-    color: white;
+    color: #5ce1e6;
     font-family: "BBH Bogle", sans-serif;
     margin: 0px;
     font-size: 42px;
+    letter-spacing: 0.2rem;
 }
 
 h2 {
@@ -16,12 +17,12 @@ h2 {
     font-family: "BBH Bogle", sans-serif;
     margin: 0px;
     font-size: 30px;
+    letter-spacing: 0.2rem;
 }
 
 .profile_picture {
     border-radius: 2%;
     width: 100%;
-    transform: rotate(-4deg);
 }
 
 .container {
@@ -31,13 +32,18 @@ h2 {
 
 .left_column {
     width: 30%;
-    padding-top: 30px;
-    padding-left: 40px;
-    padding-right: 0px;
+    height: 94vh;
+
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 0px;
+    border: 2px #5ce1e6 solid;
+    border-radius: 10px;
 }
 
 .left_column .extra_padding {
-    padding-left: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .center_contents {
@@ -51,7 +57,7 @@ h2 {
     width: 70%;
     padding-left: 50px;
     padding-top: 50px;
-    padding-right: 40px;
+    padding-right: 30px;
 }
 
 .about_me {
@@ -68,13 +74,16 @@ h2 {
 }
 
 .skills {
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 10px;
 }
 
 .curved-heading {
     border-radius: 8px;
-    border: none;
-    background-color: #879bff; 
+    border-bottom: 2px solid white;
+    background-color: #5773ff; 
+
+    padding-top: 6px;
+    padding-bottom: 6px;
     width: 100%;
 }
