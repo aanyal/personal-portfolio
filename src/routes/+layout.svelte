@@ -7,16 +7,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&family=Yusei+Magic&display=swap" rel="stylesheet">
 
+<link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
-	export const prerender = true;
 
 	let { children } = $props();
 </script>
 
 <style>
   :global(body) {
-    background-image: url('./dotted-background(1).png');
+    background-color: black;
     margin: 0; 
     padding: 0;
 	font-family: "Caveat", cursive;
