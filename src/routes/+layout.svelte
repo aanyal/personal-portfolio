@@ -10,6 +10,13 @@
 <link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="/styles/styles.css">
+<link rel="stylesheet" href="/styles/header.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Oranienbaum&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
 

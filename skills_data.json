@@ -1,0 +1,22 @@
+{
+  "Python": {
+    "name": "Python",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
+    "experience": "5"
+  },
+  "C": {
+    "name": "C++",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/960px-ISO_C%2B%2B_Logo.svg.png?20170928190710",
+    "experience": "5"
+  },
+  "yello": {
+    "name": "Python",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
+    "experience": "5"
+  },
+  "bhello": {
+    "name": "C++",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/960px-ISO_C%2B%2B_Logo.svg.png?20170928190710",
+    "experience": "5"
+  }
+}
