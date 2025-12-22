@@ -26,7 +26,7 @@
     const coords = {x: 0, y: 0}
 
     let inactivityTimer;                                   //timer to make the swoosh dissapear after a period of mouse inactivity
-    const INACTIVITY_THRESHOLD = 40;                          //make the swoosh dissapear if the mouse is inactive for 40ms
+    const INACTIVITY_THRESHOLD = 15;                          //make the swoosh dissapear if the mouse is inactive for 40ms
 
     function handleScroll() {
         var header = document.querySelector("header");
@@ -64,7 +64,7 @@
     }
     
     if (browser) {
-        const colors = [                                       //colors for the swoosh
+        const colors = [    //colors for the swoosh
             "#003f5b",
             "#2b4b7d", 
             "#5f5195", 
@@ -76,8 +76,8 @@
         ]
         const circles = document.querySelectorAll(".circle");
 
-        let numColor = Math.ceil(circles.length/colors.length);//decide the coloring of the swoosh
-        let i = 0;                                             //for the coloring of the swoosh
+        let numColor = Math.ceil(circles.length/colors.length);         //decide the coloring of the swoosh
+        let i = 0;                                                      //for the coloring of the swoosh
 
         //initializer sort of, sets the x and y or each circle to 0
         circles.forEach(function(circle, index) {
@@ -137,21 +137,62 @@
 
         <p style="padding-bottom: 30px"> Hello World! My name is </p>
         <div>
-            <h1><span class="text-spacer"></span><span style="font-size: 140px">AANYA</span></h1> 
-            <h1 style="font-size: 108px">LAKHANI</h1>
+            <h1><span class="text-spacer"></span><span class="top-name">AANYA</span></h1> 
+            
+            <h1 class="bottom-name">LAKHANI</h1>
         </div>
     </section>
 
 </div>
 
-<section id="about" class="general-section">
-    <h1> Who Am I?</h1>
+<section id="about" class="general-section container">
+    <div class="left-column">
+        <img src="profile-picture(3).jpeg" alt="profile" class="profile-picture">
+    </div>
+    <div class="right-column">
+        <div>
+            <h2>About Me</h2>
 
-    {#each {length: 30} as _, i}
-        <p>hello</p>
-    {/each}
+            <p>Sophomore at UC Irvine proficient in Java, C++, and Python through rigorous coursework, internships, and hands-on
+    projects. Skilled in Adobe Creative Suite, with experience in digital marketing and media development. Exceptional
+    communication skills, meticulous attention to detail, and ability to thrive in a team environment. </p>
+        </div>
+        
+    </div>
+</section>
 
-    <p id="randomstuff">hello world don't</p>
+<br>
+<br>
+<hr />
+<br>
+<br>
+
+<section id="about" class="general-section container">
+    <div class="skills">
+        <h2>Skills</h2>
+        <div style="padding: 20px 20px 20px 20px; border-radius: 8px; width: 100%">
+            {#each chunckedSkillEnteries as skillChunk, i}
+                <div class="container">
+
+                {#each skillChunk as [key, value], i}
+                    <SkillsPreview 
+                        logo_link={value.logo}
+                        skill_name={value.name}
+                        skill_experience={value.experience}
+                    />
+                    {#if i%2 == 0}
+                        <div style="width:80px"></div>
+                    {/if}
+                {/each}
+                
+                {#if i < chunckedSkillEnteries.length-1}
+                    <div style="height:80px"></div>
+                {/if}
+                    
+                </div>
+            {/each}
+        </div>
+    </div>
 </section>
 
 <div class="cursor">

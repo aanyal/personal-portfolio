@@ -16,15 +16,11 @@ body {
 }
 
 h1 {
-    color: black;
+    color: #00fbff;
     font-family: "Bebas Neue", sans-serif;
     font-size: 80px;
     text-align: center;
     letter-spacing: 0.2rem;
-}
-
-p {
-    font-size: 27px;
 }
 
 .name_section h1 {
@@ -35,19 +31,27 @@ p {
     margin-bottom: 0px;
 }
 
+.name_section .top-name {
+    font-size: 140px;
+}
+
+.name_section .bottom-name {
+    font-size: 108px;
+}
+
 .general-section {
-    padding: 40px 60px;
+    padding: 0px 130px 0px 130px;
     font-size: 30px;
+    width: 90%;
 }
 
 .text-spacer {
-    font-size: 10px; 
+    font-size: 0.1px; 
     visibility: hidden
 }
 
 .name_section p {
     color: #00fbff;
-    font-size: 22px;
     line-height: 0px;
     margin-bottom: 0px;
     text-align: center;
@@ -74,4 +78,18 @@ p {
   top: 0;
   left: 0;
   z-index: 9999999999999999;  
+}
+
+@media (max-width: 1000px) {
+    .general-section {
+        padding: 30px;
+    }
+
+    h1 {
+        color: #00fbff;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 60px;
+        text-align: center;
+        letter-spacing: 0.2rem;
+    }
 }

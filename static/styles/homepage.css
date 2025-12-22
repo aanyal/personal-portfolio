@@ -5,33 +5,31 @@ p {
 }
 
 h2 {
-    color: white;
-    font-family: "BBH Bogle", sans-serif;
-    margin: 0px;
-    font-size: 30px;
+    color: #00fbff;
+    font-family: "Bebas Neue", sans-serif;
     letter-spacing: 0.2rem;
+    margin: 0px;
+    font-size: 50px;
 }
 
-.profile_picture {
-    border-radius: 2%;
+.profile-picture {
+    border-radius: 10%;
     width: 100%;
 }
 
 .container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.left_column {
+.left-column {
     width: 30%;
-    height: 93vh;
-    overflow: scroll;
 
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 0px;
-    border: 2px #5ce1e6 solid;
-    border-radius: 10px;
 }
 
 .left_column .extra_padding {
@@ -46,14 +44,18 @@ h2 {
     width: 100%;
 }
 
-.right_column {
+.right-column {
     width: 70%;
     padding-left: 50px;
     padding-top: 50px;
     padding-right: 30px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.about_me {
+.about-me {
     background-image: url('../about-me-2.png');
     background-repeat: no-repeat;
     background-position: center; 
@@ -61,14 +63,18 @@ h2 {
     min-height: 434px;
 }
 
-.right_column .extra_30_padding {
+.right-column .extra_30_padding {
     padding-left: 30px;
     padding-right: 30px;
 }
 
 .skills {
-    border: 2px solid white;
-    border-radius: 10px;
+    border: none;
+    display: flex;
+
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
 }
 
 .curved-heading {
@@ -79,4 +85,23 @@ h2 {
     padding-top: 6px;
     padding-bottom: 6px;
     width: 100%;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        display: block;
+    }
+    .left-column {
+        padding: 0px;
+        margin: 0px;
+        height: auto;
+        display: block;
+        width: 100%;
+    }
+    .right-column {
+        padding: 0px;
+        margin: 0px;
+        display: block;
+        width: 100%;
+    }
 }
