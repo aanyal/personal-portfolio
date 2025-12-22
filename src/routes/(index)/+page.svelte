@@ -64,7 +64,7 @@
 
         <div class="skills">
             <div class="curved-heading">
-                <h2 style="color: white; padding: 3px 20px 3px 20px"> Technical Skills </h2>
+                <h2 style="padding: 3px 20px 3px 20px"> Technical Skills </h2>
             </div>
             
             <div style="padding: 20px 20px 20px 20px; border-radius: 8px;">
@@ -89,6 +89,23 @@
                     </div>
                 {/each}
             </div>
+        </div>
+
+        <br>
+        <hr />
+        <br>
+
+        <div>
+            <h2>Experience</h2>
+        </div>
+
+        <!-- Project Section -->
+        <br>
+        <hr />
+        <br>
+
+        <div>
+            <h2>Projects</h2>
         </div>
     </div>
 </div>

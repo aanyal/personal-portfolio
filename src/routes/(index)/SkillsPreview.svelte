@@ -33,7 +33,7 @@
          style="width: 50px; height: 50px; padding-right: 15px">
         
     <div style="width: 95%">
-        <div class="container" style="justify-content: space-between">
+        <div class="container" style="justify-content: space-between; margin-bottom: 3px">
             <p class="label-text">{skill_name}</p>
             <p class="label-text">{skill_experience} years</p>
         </div>
