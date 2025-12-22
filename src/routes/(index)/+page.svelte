@@ -120,16 +120,17 @@
 </script>
 
 <svelte:window on:scroll={handleScroll} on:mousemove={handleMouseMove} />
-<div class = "name_section">
+<div class = "name-section" id="home">
     <section>
         <header>
             <a href="#hello" class="logo">Aanya Lakhani</a>
             <nav class="navigation">
                 <ul>
-                    <li><a href="#hello">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#hello">Experience</a></li>
                     <li><a href="#hello">Portfolio</a></li>
-                    <li><a href="#hello">Skills</a></li>
                 </ul>
             </nav>
             <button class="menuToggle" on:click={ToggleMenu()}>hello</button>
@@ -167,7 +168,7 @@
 <br>
 <br>
 
-<section id="about" class="general-section container">
+<section id="skills" class="general-section container">
     <div class="skills">
         <h2>Skills</h2>
         <div style="padding: 20px 20px 20px 20px; border-radius: 8px; width: 100%">
@@ -194,6 +195,13 @@
         </div>
     </div>
 </section>
+
+<br>
+<br>
+<hr />
+<br>
+<br>
+
 
 <div class="cursor">
 

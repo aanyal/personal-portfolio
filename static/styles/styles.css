@@ -2,7 +2,7 @@ body {
     margin: 0px;
 }
 
-.name_section {
+.name-section {
     background-color: #081f25;
     height: 100vh;
     display: flex;
@@ -23,7 +23,7 @@ h1 {
     letter-spacing: 0.2rem;
 }
 
-.name_section h1 {
+.name-section h1 {
     color: white;
     line-height: 0px;
     padding-top: 0px;
@@ -31,11 +31,11 @@ h1 {
     margin-bottom: 0px;
 }
 
-.name_section .top-name {
+.name-section .top-name {
     font-size: 140px;
 }
 
-.name_section .bottom-name {
+.name-section .bottom-name {
     font-size: 108px;
 }
 
@@ -50,7 +50,7 @@ h1 {
     visibility: hidden
 }
 
-.name_section p {
+.name-section p {
     color: #00fbff;
     line-height: 0px;
     margin-bottom: 0px;
