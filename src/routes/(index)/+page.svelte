@@ -2,9 +2,9 @@
     // @ts-nocheck
 
     import SkillsPreview from "./SkillsPreview.svelte";
+    import ProjectPreview from "./ProjectPreview.svelte";
     import eachSkill from './skills_data.json';
     import { browser } from '$app/environment';
-    // import './script.js';
     
     let skillEnteries = Object.entries(eachSkill) 
 
@@ -169,9 +169,9 @@
 <br>
 
 <section id="skills" class="general-section container">
-    <div class="skills">
+    <div class="each-section">
         <h2>Skills</h2>
-        <div style="padding: 20px 20px 20px 20px; border-radius: 8px; width: 100%">
+        <div class="contents">
             {#each chunckedSkillEnteries as skillChunk, i}
                 <div class="container">
 
@@ -202,6 +202,16 @@
 <br>
 <br>
 
+<section id="portfolio" class="general-section container">
+    <div class="each-section">
+        <h2>Portfolio</h2>
+        <div class="contents" style="display:flex; flex-direction: rows; ">
+            <ProjectPreview direction="left"/>
+            <ProjectPreview direction="middle"/>
+            <ProjectPreview direction="right"/>
+        </div>
+    </div>
+</section>
 
 <div class="cursor">
 

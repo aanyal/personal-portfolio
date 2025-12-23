@@ -15,12 +15,34 @@ body {
     height: auto;
 }
 
+p {
+    color: white;
+    font-family: "Fira Code", monospace;
+    font-size: 21px;
+}
+
 h1 {
     color: #00fbff;
     font-family: "Bebas Neue", sans-serif;
     font-size: 80px;
     text-align: center;
     letter-spacing: 0.2rem;
+}
+
+h2 {
+    color: #00fbff;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.2rem;
+    margin: 0px;
+    font-size: 50px;
+}
+
+h3 {
+    color: #00fbff;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.2rem;
+    margin: 0px;
+    font-size: 30px;
 }
 
 .name-section h1 {

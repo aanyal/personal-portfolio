@@ -1,16 +1,4 @@
-p {
-    color: white;
-    font-family: "Fira Code", monospace;
-    font-size: 21px;
-}
 
-h2 {
-    color: #00fbff;
-    font-family: "Bebas Neue", sans-serif;
-    letter-spacing: 0.2rem;
-    margin: 0px;
-    font-size: 50px;
-}
 
 .profile-picture {
     border-radius: 10%;
@@ -68,13 +56,18 @@ h2 {
     padding-right: 30px;
 }
 
-.skills {
+.each-section {
     border: none;
     display: flex;
 
     width: 100%;
     flex-direction: column;
     align-items: center;
+}
+
+.each-section .contents {
+    width: 100%;
+    padding: 20px 20px 20px 20px; 
 }
 
 .curved-heading {
