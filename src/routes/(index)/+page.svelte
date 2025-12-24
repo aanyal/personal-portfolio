@@ -147,7 +147,6 @@
 
                         {#each skillChunk as [skill_name, value], i}
                             <SkillsPreview 
-                                logo_link={value.logo}
                                 skill_name={skill_name}
                                 skill_experience={value.experience}
                                 expertise_rating={value.expertise}

@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/styles/homepage.css">
 
 <script>
-    let { logo_link, skill_name, skill_experience, expertise_rating } = $props();
+    let { skill_name, skill_experience, expertise_rating } = $props();
 </script>
 
 <style>
@@ -12,10 +12,9 @@
 
     .scale {
         width: 100%;
-        height: 23px; 
-        background-color: black;
-        border: 2px solid white;
-        border-radius: 5px;
+        height: 21px; 
+        background-color: #1e1e1e;
+        border-radius: 13px;
         padding: 0.2px;
     }
 
@@ -24,14 +23,11 @@
         width: 100%;
         background-color: #00fbff;
         border: none;
-        border-radius: 2px;
+        border-radius: 12px;
     }
 </style>
 
 <div class="container" style="width: 100%;">
-    <img src="{logo_link}" 
-        alt="python"
-        style="width: 60px; height: 60px">
         
     <div style="width: 100%; padding-left: 20px">
         <div class="container" style="justify-content: space-between; margin-bottom: 3px;">
