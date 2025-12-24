@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/styles/homepage.css">
 
 <script>
-    let { logo_link, skill_name, skill_experience } = $props();
+    let { logo_link, skill_name, skill_experience, expertise_rating } = $props();
 </script>
 
 <style>
@@ -40,7 +40,7 @@
         </div>
 
         <div class="scale">
-            <div class="scale scale-value" style="width: 40%;">
+            <div class="scale scale-value" style="width: {expertise_rating}%;">
             </div>
         </div>
     </div>

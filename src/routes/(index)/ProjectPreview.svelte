@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/styles/homepage.css">
+<link rel="stylesheet" href="/styles/styles.css">
 <link rel="stylesheet" href="/styles/projects.css">
 
 <script>
@@ -9,10 +10,10 @@
             ${direction === 'middle' ? 'margin-right: 5px':''}`}
      class="project-container">
 
-    <div class="container">
+    <div class="center-contents">
         <div style="width: 90%">
             <img src="temp-image.png" alt="project banner" class="banner-image"/>
-            <h3> Project Name </h3>
+            <h3 class="pt-3"> Project Name </h3>
             <p> Short description.. </p>
 
         </div>

@@ -8,16 +8,12 @@
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    margin: 0px;
 }
 
 .left-column {
     width: 30%;
-
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-right: 0px;
+    margin: 0px;
 }
 
 .left_column .extra_padding {
@@ -25,7 +21,7 @@
     padding-right: 30px;
 }
 
-.center_contents {
+.center-contents {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -35,8 +31,6 @@
 .right-column {
     width: 70%;
     padding-left: 50px;
-    padding-top: 50px;
-    padding-right: 30px;
 
     display: flex;
     flex-direction: row;

@@ -6,6 +6,7 @@
     import Header from "../Header.svelte";
     import eachSkill from '../../display-data/skills_data.json';
     import { browser } from '$app/environment';
+    import LineBreak from "../LineBreak.svelte";
     
     let skillEnteries = Object.entries(eachSkill) 
 
@@ -16,6 +17,7 @@
      * @returns {Array<Array<Object>>} The chunked array.
      */
     function chunkData(arr, size) {
+        // console.log(skillEnteries);
         const chunkedArray = [];
         for (let i = 0; i < arr.length; i += size) {
             chunkedArray.push(arr.slice(i, i + size))
@@ -110,72 +112,69 @@
 <svelte:window on:mousemove={handleMouseMove} />
 <Header />
 
-<section id="about" class="general-section container">
-    <div class="left-column">
-        <img src="profile-picture(3).jpeg" alt="profile" class="profile-picture">
-    </div>
-    <div class="right-column">
-        <div>
-            <h2>About Me</h2>
+<div class="center-contents">
+    <div>
+        <section id="about" class="general-section container" style="margin-top: 40px">
+            <div class="left-column">
+                <img src="profile-picture(3).jpeg" alt="profile" class="profile-picture">
+            </div>
+            <div class="right-column">
+                <div>
+                    <h2>About Me</h2>
 
-            <p>Sophomore at UC Irvine proficient in Java, C++, and Python through rigorous coursework, internships, and hands-on
-    projects. Skilled in Adobe Creative Suite, with experience in digital marketing and media development. Exceptional
-    communication skills, meticulous attention to detail, and ability to thrive in a team environment. </p>
-        </div>
-        
-    </div>
-</section>
-
-<br>
-<br>
-<hr />
-<br>
-<br>
-
-<section id="skills" class="general-section container">
-    <div class="each-section">
-        <h2>Skills</h2>
-        <div class="contents">
-            {#each chunckedSkillEnteries as skillChunk, i}
-                <div class="container">
-
-                {#each skillChunk as [key, value], i}
-                    <SkillsPreview 
-                        logo_link={value.logo}
-                        skill_name={value.name}
-                        skill_experience={value.experience}
-                    />
-                    {#if i%2 == 0}
-                        <div style="width:80px"></div>
-                    {/if}
-                {/each}
-                
-                {#if i < chunckedSkillEnteries.length-1}
-                    <div style="height:80px"></div>
-                {/if}
-                    
+                    <p>Sophomore at UC Irvine proficient in Java, C++, and Python through rigorous coursework, internships, and hands-on
+            projects. Skilled in Adobe Creative Suite, with experience in digital marketing and media development. Exceptional
+            communication skills, meticulous attention to detail, and ability to thrive in a team environment. </p>
                 </div>
-            {/each}
-        </div>
-    </div>
-</section>
+                
+            </div>
+        </section>
 
-<br>
-<br>
-<hr />
-<br>
-<br>
+        <LineBreak />
 
-<section id="portfolio" class="general-section container">
-    <div class="each-section">
-        <h2>Portfolio</h2>
-        <div class="contents" style="display:flex; flex-direction: rows; ">
-            <ProjectPreview direction="left"/>
-            <ProjectPreview direction="middle"/>
-            <ProjectPreview direction="right"/>
-        </div>
+        <section id="skills" class="general-section">
+            <div class="each-section">
+                <h2>Skills</h2>
+                <div class="contents">
+                    {#each chunckedSkillEnteries as skillChunk, i}
+                        <div class="container">
+
+                        {#each skillChunk as [key, value], i}
+                            <SkillsPreview 
+                                logo_link={value.logo}
+                                skill_name={value.name}
+                                skill_experience={value.experience}
+                                expertise_rating={value.expertise}
+                            />
+                            {#if i%2 == 0}
+                                <div style="width:80px"></div>
+                            {/if}
+                        {/each}
+                        
+                        {#if i < chunckedSkillEnteries.length-1}
+                            <div style="height:80px"></div>
+                        {/if}
+                            
+                        </div>
+                    {/each}
+                </div>
+            </div>
+        </section>
+
+        <LineBreak />
+
+        <section id="portfolio" class="general-section container">
+            <div class="each-section">
+                <h2>Portfolio</h2>
+                <div class="contents" style="display:flex; flex-direction: rows; ">
+                    <ProjectPreview direction="left"/>
+                    <ProjectPreview direction="middle"/>
+                    <ProjectPreview direction="right"/>
+                </div>
+            </div>
+        </section>
     </div>
-</section>
+</div>
 
 <div class="cursor">
 
@@ -184,4 +183,5 @@
     {/each}
 
 </div>
+
     

@@ -1,6 +1,6 @@
 .project-container {
     width: 33%; 
-    background-color: #151a46; 
+    background-color: #1e1e1e; 
     border-radius: 5px;
     border: none;
     transition: all 0.2s ease-in-out;
@@ -9,7 +9,7 @@
 
 .project-container:hover {
     transform: scale(1.02);
-    background-color: #303030;
+    background-color: #373737;
     box-shadow: #181818;
 }
 

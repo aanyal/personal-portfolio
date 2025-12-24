@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: ["./src/**/*.{html,js,svelte,ts}",
-            "!./src/routes/Header.svelte"
+            "!./src/routes/Header.svelte",
           ],
 
   theme: {
