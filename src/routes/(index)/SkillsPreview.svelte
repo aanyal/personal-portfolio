@@ -6,7 +6,7 @@
 
 <style>
     .label-text {
-        font-size: 20px; 
+        font-size: 18px; 
         margin: 0px;
     }
 

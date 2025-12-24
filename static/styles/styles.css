@@ -45,6 +45,12 @@ h3 {
     font-size: 30px;
 }
 
+h4 {
+    color: white;
+    font-family: "Fira Code", monospace;
+    font-size: 17px;
+}
+
 .name-section h1 {
     color: white;
     line-height: 0px;
@@ -62,6 +68,8 @@ h3 {
 }
 
 .general-section {
+    margin-top: 60px;
+    margin-bottom: 60px;
     padding: 0px 130px 0px 130px;
     font-size: 30px;
     width: 90%;
@@ -83,8 +91,8 @@ h3 {
 .circle {
     position: absolute;
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     border-radius: 20px;
     background-color: #fff;
     /* opacity: 0; */

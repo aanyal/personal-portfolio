@@ -1,5 +1,5 @@
 <br>
 <br>
-<hr />
+<hr style="opacity: 0.4"/>
 <br>
 <br>

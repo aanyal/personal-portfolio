@@ -4,11 +4,15 @@
     import SkillsPreview from "./SkillsPreview.svelte";
     import ProjectPreview from "./ProjectPreview.svelte";
     import Header from "../Header.svelte";
-    import eachSkill from '../../display-data/skills_data.json';
-    import { browser } from '$app/environment';
     import LineBreak from "../LineBreak.svelte";
+    import Label from "../Label.svelte";
+
+    import eachSkill from '../../display-data/skills-data.json';
+    import projectPreview from '../../display-data/project-preview.json';
+    import { browser } from '$app/environment';
     
-    let skillEnteries = Object.entries(eachSkill) 
+    let projectEnteries = Object.entries(projectPreview);
+    let skillEnteries = Object.entries(eachSkill);
 
     /**
      * Chunks an array into smaller arrays of a specified size.
@@ -26,6 +30,8 @@
     }
 
     const chunckedSkillEnteries = chunkData(skillEnteries, 2);
+    const chunckedProjectEnteries = chunkData(projectEnteries, 2);
+
     const coords = {x: 0, y: 0}
 
     let inactivityTimer;                                   //timer to make the swoosh dissapear after a period of mouse inactivity
@@ -88,8 +94,8 @@
             let y = coords.y;
 
             circles.forEach(function (circle, index) {
-                circle.style.left = x - 12 + "px";  //center all the circles to the coordinates of the mouse
-                circle.style.top = y + 12 + "px";
+                circle.style.left = x - 15 + "px";  //center all the circles to the coordinates of the mouse
+                circle.style.top = y - 15 + "px";
 
                 circle.style.scale = (circles.length-index)/circles.length; //change the scale of the circles to fade out
 
@@ -114,7 +120,7 @@
 
 <div class="center-contents">
     <div>
-        <section id="about" class="general-section container" style="margin-top: 40px">
+        <section id="about" class="general-section container">
             <div class="left-column">
                 <img src="profile-picture(3).jpeg" alt="profile" class="profile-picture">
             </div>
@@ -130,19 +136,19 @@
             </div>
         </section>
 
-        <LineBreak />
+       <hr style="opacity: 0.4"/>
 
         <section id="skills" class="general-section">
             <div class="each-section">
-                <h2>Skills</h2>
+                <h2 class="mb-7">Skills</h2>
                 <div class="contents">
                     {#each chunckedSkillEnteries as skillChunk, i}
                         <div class="container">
 
-                        {#each skillChunk as [key, value], i}
+                        {#each skillChunk as [skill_name, value], i}
                             <SkillsPreview 
                                 logo_link={value.logo}
-                                skill_name={value.name}
+                                skill_name={skill_name}
                                 skill_experience={value.experience}
                                 expertise_rating={value.expertise}
                             />
@@ -161,16 +167,24 @@
             </div>
         </section>
 
-        <LineBreak />
+        <hr style="opacity: 0.4"/>
 
         <section id="portfolio" class="general-section container">
             <div class="each-section">
                 <h2>Portfolio</h2>
-                <div class="contents" style="display:flex; flex-direction: rows; ">
-                    <ProjectPreview direction="left"/>
-                    <ProjectPreview direction="middle"/>
-                    <ProjectPreview direction="right"/>
-                </div>
+                {#each chunckedProjectEnteries as projectChunk, i}
+                    <div class="contents" style="display:flex; flex-direction: rows; ">
+                        {#each projectChunk as [title, contents], i}
+                            <ProjectPreview direction={i%2 == 0 ? "left" : "right"}
+                                            title={title}
+                                            start_date={contents.start_date}
+                                            end_date={contents.end_date}
+                                            project_type={contents.project_type}
+                                            short_description={contents.short_description}
+                                            skills={contents.skills}/>
+                        {/each}
+                    </div>
+                {/each}
             </div>
         </section>
     </div>

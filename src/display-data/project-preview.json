@@ -1,0 +1,30 @@
+{
+    "Flappy Bird": {
+        "start_date": "June 2025",
+        "end_date": "Present",
+        "project_type": "Robotics",
+        "short_description": "A drrone, what more",
+        "skills": ["ArduPilot"]
+    },
+    "Book Tracker": {
+        "start_date": "June 2025",
+        "end_date": "Present",
+        "project_type": "Web App",
+        "short_description": "A book tracker, what more",
+        "skills": ["Django", "Python", "MySQL"]
+    },
+    "Along the Way": {
+        "start_date": "November 2025",
+        "end_date": "November 2025",
+        "project_type": "Web App",
+        "short_description": "A book tracker, what more",
+        "skills": ["API", "Python", "Django"]
+    },
+    "Doodle Jump": {
+        "start_date": "November 2025",
+        "end_date": "November 2025",
+        "project_type": "Web App",
+        "short_description": "A book tracker, what more",
+        "skills": ["Python", "Adobe Creative Suite"]
+    }
+}

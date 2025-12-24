@@ -1,0 +1,32 @@
+{
+  "Python": {
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
+    "experience": "5",
+    "expertise": 85
+  },
+  "C++": {
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/960px-ISO_C%2B%2B_Logo.svg.png?20170928190710",
+    "experience": "3",
+    "expertise": 50
+  },
+  "Java": {
+    "logo": "https://cdn.prod.website-files.com/63fda77e5fd49598bbf00892/64358005d142a37eee9ad74c_Java-Logo.png",
+    "experience": "4",
+    "expertise": 70
+  },
+  "Adobe Creative Suite": {
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Adobe_Creative_Cloud_rainbow_icon.svg",
+    "experience": "6",
+    "expertise": 70
+  },
+  "Django": {
+    "logo": "https://static.djangoproject.com/img/logos/django-logo-positive.svg",
+    "experience": "1",
+    "expertise": 30
+  },
+  "Flask": {
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmD38KsMgEwahtWc_Nfs5ZVktP9dBc36MUZA&s",
+    "experience": "3",
+    "expertise": 55
+  }
+}

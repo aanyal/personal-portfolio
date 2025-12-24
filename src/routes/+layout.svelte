@@ -18,6 +18,9 @@ let { children } = $props();</script><link rel="stylesheet" href="/styles/homepa
 
 <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&amp;family=Oswald:wght@200..700&amp;display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet" />
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet" />
 
 <svelte:head>
