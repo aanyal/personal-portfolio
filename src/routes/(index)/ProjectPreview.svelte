@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="/styles/homepage.css">
-<link rel="stylesheet" href="/styles/styles.css">
-<link rel="stylesheet" href="/styles/projects.css">
-
 <script>
     import Label from "../Label.svelte";
 

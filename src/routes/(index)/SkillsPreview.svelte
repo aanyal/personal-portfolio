@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/styles/homepage.css">
+
 
 <script>
     let { skill_name, skill_experience, expertise_rating } = $props();

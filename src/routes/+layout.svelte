@@ -15,9 +15,6 @@ let { children } = $props();</script><link rel="stylesheet" href="/styles/homepa
 <link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&amp;display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&amp;family=Fira+Code:wght@300..700&amp;display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="/styles/styles.css" />
-<link rel="stylesheet" href="/styles/header.css" />
-
 <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&amp;family=Oswald:wght@200..700&amp;display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet" />
 
@@ -29,7 +26,6 @@ let { children } = $props();</script><link rel="stylesheet" href="/styles/homepa
 	<link rel="icon" href="{favicon}" />
 </svelte:head>
 
-<Header />
 
 {@render children()}
 

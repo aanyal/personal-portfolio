@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="/styles/header.css">
-
 <script>
     // @ts-nocheck
     import { browser } from '$app/environment';
@@ -21,13 +19,13 @@
 
 <svelte:window on:scroll={handleScroll} />
 <header>
-    <a href="#hello" class="logo">Aanya Lakhani</a>
+    <a href="/" class="logo">Aanya Lakhani</a>
     <nav class="navigation">
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#hello">Experience</a></li>
+            <li><a href="#skills">Experience</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
         </ul>
     </nav>

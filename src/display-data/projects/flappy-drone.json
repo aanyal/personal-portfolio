@@ -1,0 +1,10 @@
+{
+    "Flappy Drone": {
+        "start_date": "June 2025",
+        "end_date": "Present",
+        "project_type": "Robotics",
+        "short_description": "A drrone, what more",
+        "skills": ["ArduPilot"],
+        "slug": "flappy-drone"
+    }
+}
