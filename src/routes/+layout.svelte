@@ -1,5 +1,7 @@
-<script>import "../app.css";
+<script>
+import "../app.css";
 import favicon from '$lib/assets/favicon.svg';
+import Header from './Header.svelte';
 
 let { children } = $props();</script><link rel="stylesheet" href="/styles/homepage.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,7 +29,11 @@ let { children } = $props();</script><link rel="stylesheet" href="/styles/homepa
 	<link rel="icon" href="{favicon}" />
 </svelte:head>
 
-{@render children()}<style>
+<Header />
+
+{@render children()}
+
+<style>
   :global(body) {
     background-color: black;
     margin: 0; 

@@ -116,7 +116,17 @@
 </script>
 
 <svelte:window on:mousemove={handleMouseMove} />
-<Header />
+
+<div class = "name-section" id="home">
+    <section>
+        <p style="padding-bottom: 30px"> Hello World! My name is </p>
+        <div>
+            <h1><span class="text-spacer"></span><span class="top-name">AANYA</span></h1> 
+            
+            <h1 class="bottom-name">LAKHANI</h1>
+        </div>
+    </section>
+</div>
 
 <div class="center-contents">
     <div>
@@ -136,7 +146,9 @@
             </div>
         </section>
 
-       <hr style="opacity: 0.4"/>
+        <div class="center-contents">
+            <hr/>
+        </div>
 
         <section id="skills" class="general-section">
             <div class="each-section">
@@ -166,7 +178,9 @@
             </div>
         </section>
 
-        <hr style="opacity: 0.4"/>
+        <div class="center-contents">
+            <hr/>
+        </div>
 
         <section id="portfolio" class="general-section container">
             <div class="each-section">
@@ -180,7 +194,8 @@
                                             end_date={contents.end_date}
                                             project_type={contents.project_type}
                                             short_description={contents.short_description}
-                                            skills={contents.skills}/>
+                                            skills={contents.skills}
+                                            slug={contents.slug}/>
                         {/each}
                     </div>
                 {/each}

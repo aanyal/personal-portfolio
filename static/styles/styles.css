@@ -51,6 +51,11 @@ h4 {
     font-size: 17px;
 }
 
+hr {
+    opacity: 0.4;
+    width: 70%;
+}
+
 .name-section h1 {
     color: white;
     line-height: 0px;
@@ -72,7 +77,6 @@ h4 {
     margin-bottom: 60px;
     padding: 0px 130px 0px 130px;
     font-size: 30px;
-    width: 90%;
 }
 
 .text-spacer {
