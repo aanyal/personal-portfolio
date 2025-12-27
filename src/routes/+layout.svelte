@@ -26,6 +26,7 @@ let { children } = $props();</script><link rel="stylesheet" href="/styles/homepa
 	<link rel="icon" href="{favicon}" />
 </svelte:head>
 
+<Header />
 
 {@render children()}
 

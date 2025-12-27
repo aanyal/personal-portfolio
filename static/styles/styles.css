@@ -34,7 +34,7 @@ h2 {
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 0.2rem;
     margin: 0px;
-    font-size: 50px;
+    font-size: 50px !important;
 }
 
 h3 {
@@ -42,7 +42,7 @@ h3 {
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 0.2rem;
     margin: 0px;
-    font-size: 30px;
+    font-size: 30px !important;
 }
 
 h4 {
@@ -76,7 +76,6 @@ hr {
     margin-top: 60px;
     margin-bottom: 60px;
     padding: 0px 130px 0px 130px;
-    font-size: 30px;
 }
 
 .text-spacer {
@@ -90,28 +89,6 @@ hr {
     margin-bottom: 0px;
     text-align: center;
     font-family: "Fira Code", monospace;
-}
-
-.circle {
-    position: absolute;
-    display: block;
-    width: 30px;
-    height: 30px;
-    border-radius: 20px;
-    background-color: #fff;
-    /* opacity: 0; */
-    transition: opacity 1s linear;
-}
-
-.cursor {
-  pointer-events: none;
-  position: fixed;
-  display: block;
-  border-radius: 0;
-  mix-blend-mode: exclusion;
-  top: 0;
-  left: 0;
-  z-index: 9999999999999999;  
 }
 
 @media (max-width: 1000px) {

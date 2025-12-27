@@ -116,7 +116,6 @@
 </script>
 
 <svelte:window on:mousemove={handleMouseMove} />
-<Header />
 
 <div class = "name-section" id="home">
     <section>
