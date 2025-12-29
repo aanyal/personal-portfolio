@@ -29,9 +29,19 @@ export const projectType = defineType({
     }),
     defineField({
       name: 'endDate',
-      type: 'date',
-      initialValue: () => new Date().toISOString(),
-      validation: (rule) => rule.required(),
+      type: 'document',
+      fields: [
+          {  
+              name: 'present',
+              type: 'boolean'
+          },
+          {  
+            name: 'endDate',
+            type: 'date',
+            initialValue: () => new Date().toISOString(),
+            validation: (rule) => rule.required()
+          }
+      ]
     }),
     defineField({
       name: 'skills',
@@ -65,6 +75,11 @@ export const projectType = defineType({
           name: 'textBlock',
           type: 'document',
           fields: [
+            {
+              title: 'Heading',
+              name: 'heading',
+              type: 'string'
+            },
             {
               title: 'Image or Video',
               name: 'visuals',

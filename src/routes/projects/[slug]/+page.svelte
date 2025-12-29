@@ -7,6 +7,11 @@
 		data: PageData;
 	}
 
+    const monthNames = ["January.", "February", "March", 
+                        "April", "May", "June", "July", 
+                        "August", "September", "October", 
+                        "November", "December"];
+
     let data = $props();
     let details = data.data.pageData;
     let slug = data.params.slug;
@@ -16,7 +21,18 @@
     <div class="left-column">
         <div class="left-section">
             <div class="extra_padding"> 
-                <p>{details.startDate} - {details.endDate}</p>
+                <p>
+                    {monthNames[new Date(details.startDate).getMonth()] 
+                    + " " + 
+                    new Date(details.startDate).getFullYear()} 
+                    
+                    - 
+
+                    {(details.endDate.present) ? "Present" : 
+                    monthNames[new Date(details.endDate.endDate).getMonth()] 
+                    + " " + 
+                    new Date(details.endDate.endDate).getFullYear()}
+                </p>
             </div>
 
             <div class="extra_padding">
@@ -44,7 +60,7 @@
 
                 <br/>
                 {#each details.content as each_subheading}
-                    <p style="margin: 0px;">--- {each_subheading.heading}</p>
+                    <a style="color: white" href="#{each_subheading.heading}">--- {each_subheading.heading}</a>
                 {/each}
             </div>
         </div>
@@ -55,7 +71,9 @@
 
         <div class="center_contents">
             {#each details.content as each_subheading}
-                <PortableText value={each_subheading.text} />
+                <div id="{each_subheading.heading}">
+                    <PortableText value={each_subheading.text}/>
+                </div>
             {/each}
         </div>
 

@@ -6,7 +6,7 @@ const fetchPage = async ({ params }: { params: { slug: string } }) => {
 	const { slug } = params;
 
 	const pageQuery = defineQuery(`
-		*[_type == "post" && slug.current == $slug][0] {
+		*[_type == "project" && slug.current == $slug][0] {
 			_id, 
 			title, 
 			slug, 

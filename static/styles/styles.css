@@ -15,7 +15,7 @@ body {
     height: auto;
 }
 
-p {
+p, a {
     color: white;
     font-family: "Fira Code", monospace;
     font-size: 17px;
