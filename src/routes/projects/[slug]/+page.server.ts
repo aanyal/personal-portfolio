@@ -2,31 +2,36 @@ import type { PageServerLoad } from './$types';
 import { client } from '$lib/sanity/sanityClient.js';
 import { defineQuery } from 'groq';
 
-const fetchPage = async () => {
+const fetchPage = async ({ params }: { params: { slug: string } }) => {
+	const { slug } = params;
+
 	const pageQuery = defineQuery(`
-		*[_type == "post"] | order(date desc) {
-			_id,
-			title,
-			startDate,
+		*[_type == "post" && slug.current == $slug][0] {
+			_id, 
+			title, 
+			slug, 
+			projectType, 
+			startDate, 
 			endDate,
 			skills,
-			slug,
+			cover,
+			content
 		}
   	`);
 
-	const newsPage = await client.fetch(pageQuery);
+	const projectData = await client.fetch(pageQuery, {
+		slug
+	});
 
-	if (newsPage == null) {
-		throw Error('News page data is null.');
+	if (projectData == null) {
+		throw Error('Project data is null.');
 	}
 
-	return newsPage;
+	return projectData;
 };
 
-export const load: PageServerLoad = async () => {
-	const data = await fetchPage();
-
-	console.log(data[0].title);
+export const load: PageServerLoad = async ({ params: { slug } }) => {
+	const data = await fetchPage({ params: { slug: slug } });
 
 	return {
 		pageData: data,
