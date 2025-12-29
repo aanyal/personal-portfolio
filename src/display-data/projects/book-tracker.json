@@ -1,0 +1,9 @@
+{
+    "title": "Book Tracker",
+    "start_date": "June 2025",
+    "end_date": "Present",
+    "project_type": "Web App",
+    "short_description": "A book tracker, what more",
+    "skills": ["Django", "Python", "MySQL"],
+    "slug": "book-tracker"
+}

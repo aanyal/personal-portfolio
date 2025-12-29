@@ -24,7 +24,7 @@ p {
 h1 {
     color: #00fbff;
     font-family: "Bebas Neue", sans-serif;
-    font-size: 80px;
+    font-size: 80px !important;
     text-align: center;
     letter-spacing: 0.2rem;
 }
@@ -48,7 +48,7 @@ h3 {
 h4 {
     color: white;
     font-family: "Fira Code", monospace;
-    font-size: 17px;
+    font-size: 17px !important;
 }
 
 hr {

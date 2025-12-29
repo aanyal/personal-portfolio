@@ -14,11 +14,14 @@
 .left-column {
     width: 30%;
     margin: 0px;
+    
+    /* padding: 20px; */
 }
 
-.left_column .extra_padding {
-    padding-left: 30px;
-    padding-right: 30px;
+.left-column .left-section {
+    background-color: #1e1e1e; 
+    border-radius: 10px;
+    padding: 30px;
 }
 
 .center-contents {
@@ -31,10 +34,7 @@
 .right-column {
     width: 70%;
     padding-left: 50px;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    padding-top: 20px;
 }
 
 .about-me {

@@ -1,10 +1,17 @@
 {
-    "Flappy Drone": {
-        "start_date": "June 2025",
-        "end_date": "Present",
-        "project_type": "Robotics",
-        "short_description": "A drrone, what more",
-        "skills": ["ArduPilot"],
-        "slug": "flappy-drone"
+    "title": "Flappy Drone",
+    "start_date": "June 2025",
+    "end_date": "Present",
+    "project_type": "Robotics",
+    "short_description": "A drrone, what more",
+    "skills": ["ArduPilot", "Soldering"],
+    "slug": "flappy-drone",
+    "cover_image": "cover.png",
+
+    "sub_headings": {
+        "Features": "",
+        "Timeline": "",
+        "Challenges": "",
+        "Final Thoughts": ""
     }
 }
