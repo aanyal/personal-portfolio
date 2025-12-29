@@ -17,14 +17,25 @@ export const postType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'publishedAt',
+      name: 'startDate',
       type: 'date',
       initialValue: () => new Date().toISOString(),
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'image',
-      type: 'image',
+      name: 'endDate',
+      type: 'date',
+      initialValue: () => new Date().toISOString(),
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'skills',
+      type: 'array',
+      of: [{type: 'text'}],
+    }),
+    defineField({
+      name: 'coverImage',
+      type: 'text',
     }),
     defineField({
       name: 'body',
