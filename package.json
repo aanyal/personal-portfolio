@@ -9,7 +9,8 @@
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"deploy": "npx gh-pages -d dist"
 	},
 	"devDependencies": {
 		"@portabletext/svelte": "^3.0.1",
@@ -19,6 +20,7 @@
 		"@sveltejs/vite-plugin-svelte": "^6.2.1",
 		"@tailwindcss/typography": "^0.5.14",
 		"autoprefixer": "^10.4.20",
+		"gh-pages": "^6.3.0",
 		"postcss": "^8.5.6",
 		"svelte": "^5.45.6",
 		"svelte-check": "^4.3.4",

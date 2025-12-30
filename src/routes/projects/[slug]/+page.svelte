@@ -14,9 +14,10 @@
 
     let data = $props();
     let details = data.data.pageData;
-    let slug = data.params.slug;
+    // let slug = data.params.slug;
 </script>
 
+{#if details != "none"}
 <div style="display: flex; margin: 120px 30px 30px 30px;">
     <div class="left-column">
         <div class="left-section">
@@ -80,3 +81,4 @@
     </div>
 
 </div>
+{/if}

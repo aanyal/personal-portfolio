@@ -24,7 +24,8 @@ const fetchPage = async ({ params }: { params: { slug: string } }) => {
 	});
 
 	if (projectData == null) {
-		throw Error('Project data is null.');
+		// throw Error('Project data is null.');
+		return "none";
 	}
 
 	return projectData;

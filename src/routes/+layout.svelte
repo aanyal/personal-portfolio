@@ -3,7 +3,10 @@ import "../app.css";
 import favicon from '$lib/assets/favicon.svg';
 import Header from './Header.svelte';
 
-let { children } = $props();</script><link rel="stylesheet" href="/styles/homepage.css" />
+let { children } = $props();
+
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&amp;display=swap" rel="stylesheet" />
@@ -30,11 +33,3 @@ let { children } = $props();</script><link rel="stylesheet" href="/styles/homepa
 
 {@render children()}
 
-<style>
-  :global(body) {
-    background-color: black;
-    margin: 0; 
-    padding: 0;
-  }
-
-</style>
