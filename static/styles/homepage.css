@@ -14,14 +14,19 @@
 .left-column {
     width: 30%;
     margin: 0px;
-    
     /* padding: 20px; */
 }
 
-.left-column .left-section {
+.project-details {
+    color: white;
+}
+
+.project-details .left-column {
     background-color: #1e1e1e; 
     border-radius: 10px;
     padding: 30px;
+    height: 85vh;
+    overflow: scroll;
 }
 
 .center-contents {
@@ -34,7 +39,20 @@
 .right-column {
     width: 70%;
     padding-left: 50px;
-    padding-top: 20px;
+    padding-top: 10px;
+}
+
+.project-details .right-column {
+    height: 85vh;
+    overflow: scroll;
+}
+
+.right-column h3 {
+    margin-top: 10px;
+}
+
+.right-column h4 {
+    margin-top: 10px;
 }
 
 .about-me {

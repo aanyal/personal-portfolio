@@ -66,6 +66,11 @@ export const projectType = defineType({
       ]
     }),
     defineField({
+      name: 'assetsPath',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: 'content',
       type: 'array',
       of: 
@@ -76,9 +81,14 @@ export const projectType = defineType({
           type: 'document',
           fields: [
             {
-              title: 'Heading',
-              name: 'heading',
-              type: 'string'
+              title: "Heading?",
+              name: "isHeading",
+              type: "boolean",
+            },
+            {
+              title: "Heading",
+              name: "heading",
+              type: "string"
             },
             {
               title: 'Image or Video',
@@ -88,7 +98,8 @@ export const projectType = defineType({
                 {
                   title: "Visuals?",
                   name: "hasVisuals",
-                  type: "boolean"
+                  type: "boolean",
+                  validation: (rule) => rule.required(),
                 },
                 {
                   title: 'Video?',
@@ -99,6 +110,12 @@ export const projectType = defineType({
                   title: 'Image or Video Path',
                   name: 'path',
                   type: 'string'
+                },
+                {
+                  title: 'Image Size',
+                  name: 'size',
+                  type: 'number',
+                  initialValue: 30
                 }
               ]
             },
