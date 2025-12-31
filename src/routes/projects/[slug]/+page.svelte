@@ -14,7 +14,8 @@
 
     let data = $props();
     let details = data.data.pageData;
-    // let slug = data.params.slug;
+
+    import { asset } from '$app/paths';
 </script>
 
 {#if details != "none"}
@@ -40,10 +41,10 @@
                 <div class="extra_padding">
                     {#if details.cover.isVideo }
                         <video autoplay loop muted class="banner-image ">
-                            <source src="{details.assetsPath}/{details.cover.visuals}" type="video/mp4" />
+                            <source src={asset(details.assetsPath + '/' + details.cover.visuals)} type="video/mp4" />
                         </video>
                     {:else}
-                        <img src="{details.assetsPath}/{details.cover.visuals}" alt="cover" class="profile_picture">
+                        <img src={asset(details.assetsPath + '/' + details.cover.visuals)} alt="cover" class="profile_picture">
                     {/if}
                 </div>
 
@@ -94,10 +95,10 @@
                                 <div style="width: {each_subheading.visuals.size}%">
                                     {#if each_subheading.visuals.isVideo}
                                         <video autoplay loop muted class="banner-image ">
-                                            <source src="{details.assetsPath}/{each_subheading.visuals.path}" type="video/mp4" />
+                                            <source src={asset(details.assetsPath + '/' + each_subheading.visuals.path)} type="video/mp4" />
                                         </video>
                                     {:else}
-                                        <img src="{details.assetsPath}/{each_subheading.visuals.path}" alt="{each_subheading.heading}" style="border-radius: 10px"/>
+                                        <img src={asset(details.assetsPath + '/' + each_subheading.visuals.path)} alt="{each_subheading.heading}" style="border-radius: 10px"/>
                                     {/if}
                                 </div>
                                 <div style="width: {100 - each_subheading.visuals.size}%; margin-left: 20px; display:flex; align-items: center">

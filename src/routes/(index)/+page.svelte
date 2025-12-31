@@ -10,6 +10,8 @@
     import eachSkill from '../../display-data/skills-data.json';
     import projectPreview from '../../display-data/project-preview.json';
     import { browser } from '$app/environment';
+
+    import { onMount } from 'svelte';
     
     let projectEnteries = Object.entries(projectPreview);
     let skillEnteries = Object.entries(eachSkill);
@@ -59,7 +61,7 @@
         }
     }
     
-    if (browser) {
+    onMount(() => {
         const colors = [    //colors for the swoosh
             "#003f5b",
             "#2b4b7d", 
@@ -112,7 +114,7 @@
         }
 
         animateCircles();
-    }
+    });
 </script>
 
 <svelte:window on:mousemove={handleMouseMove} />

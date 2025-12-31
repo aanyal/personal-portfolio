@@ -34,7 +34,7 @@ const fetchPage = async ({ params }: { params: { slug: string } }) => {
 
 export const load: PageServerLoad = async ({ params: { slug } }) => {
 	const data = await fetchPage({ params: { slug: slug } });
-	console.log(data);
+	
 	return {
 		pageData: data,
 	};
