@@ -2,6 +2,7 @@
 import "../app.css";
 import favicon from '$lib/assets/favicon.svg';
 import Header from './Header.svelte';
+import CursorEffect from "./CursorEffect.svelte";
 
 let { children } = $props();
 
@@ -30,6 +31,8 @@ let { children } = $props();
 </svelte:head>
 
 <Header />
+
+<CursorEffect />
 
 {@render children()}
 

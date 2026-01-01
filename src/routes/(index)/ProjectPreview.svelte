@@ -12,8 +12,8 @@
 </script>
 
 <a href="projects/{slug}">
-    <div style={`${direction === 'left' ? 'margin-right: 7px' : 'margin-left: 7px'};
-                ${direction === 'middle' ? 'margin-right: 7px':''}`}
+    <div style={`${direction === 'left' ? 'margin-right: 15px' : 'margin-left: 15px'};
+                ${direction === 'middle' ? 'margin-right: 15px':''}`}
         class="project-container">
 
         <div class="center-contents">
