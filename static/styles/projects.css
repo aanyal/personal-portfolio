@@ -33,7 +33,7 @@
 .project-details .left-column {
     background-color: #1e1e1e; 
     border-radius: 10px;
-    padding: 30px;
+    padding: 25px;
     height: 85vh;
     overflow: scroll;
 }
@@ -41,7 +41,4 @@
 .project-details .right-column {
     height: 85vh;
     overflow: scroll;
-}
-
-@media (max-width: 1000px) {
 }

@@ -19,66 +19,59 @@
 
 {#if details != "none"}
 <div class="project-details">
-    <div style="display: flex; margin: 120px 30px 30px 30px;">
+    <div class="flex mt-[120px] ml-[30px] mb-[30px] mr-[30px]">
         <div class="left-column">
             <div class="left-section">
-                <div class="extra_padding"> 
-                    <p>
-                        {monthNames[new Date(details.startDate).getMonth()] 
-                        + " " + 
-                        new Date(details.startDate).getFullYear()} 
-                        
-                        - 
-
-                        {(details.endDate.present) ? "Present" : 
-                        monthNames[new Date(details.endDate.endDate).getMonth()] 
-                        + " " + 
-                        new Date(details.endDate.endDate).getFullYear()}
-                    </p>
-                </div>
-
-                <div class="extra_padding">
-                    {#if details.cover.isVideo }
-                        <video autoplay loop muted class="banner-image ">
-                            <source src={asset(details.assetsPath + '/' + details.cover.visuals)} type="video/mp4" />
-                        </video>
-                    {:else}
-                        <img src={asset(details.assetsPath + '/' + details.cover.visuals)} alt="cover" class="profile_picture">
-                    {/if}
-                </div>
-
-                <br>
-
-                <div class="extra_padding"> 
-                    <h2 style="padding-bottom: 0px; margin-top: -18px">{details.title}</h2>
-
-                    <div class="container flex-wrap" style="margin-top: -8px; margin-bottom: 5px">
-                        {#each details.skills as skill}
-                            <Label skill_name={skill}/>
-                        {/each}
-                    </div>
+                <p class="mb-[10px]">
+                    {monthNames[new Date(details.startDate).getMonth()] 
+                    + " " + 
+                    new Date(details.startDate).getFullYear()} 
                     
-                    <p style="margin-top: 0px;">{details.projectType}</p>
+                    - 
 
-                    <br/>
-                    {#each details.content as each_subheading}
-                        {#if each_subheading.isHeading}
-                            <a style="color: white" href="#{each_subheading.heading}">--- {each_subheading.heading}</a>
-                            <br>
-                        {:else}
-                            <div style="margin-left: 40px; margin-bottom: 0px; margin-top: 0px; display: flex;">
-                                <p style="margin-right: 10px">- </p>
-                                <a style="color: white;" href="#{each_subheading.heading}">{each_subheading.heading}</a>
-                            </div>
-                        {/if}
+                    {(details.endDate.present) ? "Present" : 
+                    monthNames[new Date(details.endDate.endDate).getMonth()] 
+                    + " " + 
+                    new Date(details.endDate.endDate).getFullYear()}
+                </p>
+
+                {#if details.cover.isVideo }
+                    <video autoplay loop muted class="banner-image ">
+                        <source src={asset(details.assetsPath + '/' + details.cover.visuals)} type="video/mp4" />
+                    </video>
+                {:else}
+                    <img src={asset(details.assetsPath + '/' + details.cover.visuals)} alt="cover" class="profile_picture">
+                {/if}
+                
+            <br>
+                <h2 class="-mt-[18px]">{details.title}</h2>
+
+                <div class="flex flex-wrap -mt-[8px] mb-[7px]">
+                    {#each details.skills as skill}
+                        <Label skill_name={skill}/>
                     {/each}
                 </div>
-            </div>
+                
+                <p>{details.projectType}</p>
 
+                <br/>
+
+                {#each details.content as each_subheading}
+                    {#if each_subheading.isHeading}
+                        <a href="#{each_subheading.heading}">--- {each_subheading.heading}</a>
+
+                        <br>
+                    {:else}
+                        <div class="ml-[40px] mb-[0px] mt-[0px] flex">
+                            <p class="mr-[10px]">- </p>
+                            <a href="#{each_subheading.heading}">{each_subheading.heading}</a>
+                        </div>
+                    {/if}
+                {/each}
+            </div>
         </div>
 
         <div class="right-column">
-
             <div class="center_contents">
                 {#each details.content as each_subheading}
                     <div id="{each_subheading.heading}">
@@ -90,17 +83,17 @@
                         {/if}
 
                         {#if each_subheading.visuals.hasVisuals}
-                            <div style="display: flex; flex-direction: row; margin-top: 10px; margin-bottom: 25px">
+                            <div class="flex flex-row mt-[10px] mb-[25px]">
                                 <div style="width: {each_subheading.visuals.size}%">
                                     {#if each_subheading.visuals.isVideo}
                                         <video autoplay loop muted class="banner-image ">
                                             <source src={asset(details.assetsPath + '/' + each_subheading.visuals.path)} type="video/mp4" />
                                         </video>
                                     {:else}
-                                        <img src={asset(details.assetsPath + '/' + each_subheading.visuals.path)} alt="{each_subheading.heading}" style="border-radius: 10px"/>
+                                        <img src={asset(details.assetsPath + '/' + each_subheading.visuals.path)} alt="{each_subheading.heading}" class="rounded-md"/>
                                     {/if}
                                 </div>
-                                <div style="width: {100 - each_subheading.visuals.size}%; margin-left: 20px; display:flex; align-items: center">
+                                <div style="width: {100 - each_subheading.visuals.size}%;" class="ml-[20px] flex items-center">
                                     <PortableText value={each_subheading.text}/>
                                 </div>
                             </div>

@@ -112,7 +112,6 @@
             <div class="each-section">
                 <h2>Portfolio</h2>
                 {#each chunckedProjectEnteries2 as projectChunk, i}
-                <!-- 15px 20px 0px 20px;  -->
                     <div class="w-[100%] pt:[15px] pb:[0px] pl:[20px] pr:[20px] block flex-row lg:flex">
                         {#each projectChunk as project, i}
                             <ProjectPreview direction={i%2 == 0 ? "left" : "right"}
