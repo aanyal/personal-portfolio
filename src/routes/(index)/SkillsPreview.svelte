@@ -2,10 +2,10 @@
     let { skill_name, skill_experience, expertise_rating } = $props();
 </script>
 
-<div class="container" style="width: 100%;">
+<div class="container w-[100%]">
         
-    <div style="width: 100%; padding-left: 20px">
-        <div class="flex flex-row w-[100%]" style="justify-content: space-between; margin-bottom: 3px;">
+    <div class="w-[100%] pl-[20px]">
+        <div class="flex flex-row w-[100%] mb-[3px] justify-between">
             <p class="label-text">{skill_name}</p>
             <p class="label-text">{skill_experience} year{parseInt(skill_experience) > 1 ? "s" : ""}</p>
         </div>
