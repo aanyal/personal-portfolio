@@ -2,6 +2,7 @@
     import Label from '../../Label.svelte';
 	import type { PageData } from './$types';
     import {PortableText} from '@portabletext/svelte'
+    import { asset } from '$app/paths';
 
 	interface Props {
 		data: PageData;
@@ -14,8 +15,6 @@
 
     let data = $props();
     let details = data.data.pageData;
-
-    import { asset } from '$app/paths';
 </script>
 
 {#if details != "none"}

@@ -17,6 +17,7 @@ header {
     z-index: 10;
     border-bottom: 3px solid #00fbff;
 }
+
 header.sticky {
     padding: 10px 60px;
     background: #fff;
@@ -135,4 +136,7 @@ header.sticky .menuToggle {
     header nav ul li a {
         border-bottom: 1px solid rgba(0,0,0,0.2);
     }
+    header .logo {
+        font-size: 19px;
+    }	
 }

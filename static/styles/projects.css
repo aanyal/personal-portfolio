@@ -25,3 +25,21 @@
     border: none; 
     margin-top: 25px;
 }
+
+/* Project Details in index.html */
+.project-details {
+    color: white;
+}
+
+.project-details .left-column {
+    background-color: #1e1e1e; 
+    border-radius: 10px;
+    padding: 30px;
+    height: 85vh;
+    overflow: scroll;
+}
+
+.project-details .right-column {
+    height: 85vh;
+    overflow: scroll;
+}

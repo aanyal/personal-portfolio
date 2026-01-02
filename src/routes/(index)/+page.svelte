@@ -33,32 +33,42 @@
 
     const chunckedSkillEnteries = chunkData(skillEnteries, 2);
     const chunckedProjectEnteries = chunkData(projectEnteries, 2);
+
+    let data = $props();
+    let projectData = data.data.data;
+    const chunckedProjectEnteries2 = chunkData(projectData, 2);
+    console.log(projectData[0].endDate);
+    console.log(chunkData(projectData, 2));
 </script>
 
-<div class = "name-section" id="home">
+<div class="name-section" id="home">
     <section>
-        <p style="padding-bottom: 30px"> Hello World! My name is </p>
+        <p class="!mb-[4.5rem] lg:!mb-[5rem]"> Hello World! My name is </p>
         <div>
-            <h1><span class="text-spacer"></span><span class="top-name">AANYA</span></h1> 
+            <h1 class="leading-[0] text-white !text-[120px] lg:!text-[140px] !mb-[5rem] lg:!mb-[6rem]">AANYA</h1>  
             
-            <h1 class="bottom-name">LAKHANI</h1>
+            <h1 class="leading-[0] text-white !text-[90px] lg:!text-[108px]">LAKHANI</h1>
         </div>
     </section>
 </div>
 
 <div class="center-contents">
     <div>
-        <section id="about" class="general-section container">
+        <section id="about" class="general-section flex-container">
             <div class="left-column">
-                <img src="profile-picture(3).jpeg" alt="profile" class="profile-picture">
+                <img src="profile-picture.jpeg" alt="profile" class="profile-picture">
             </div>
-            <div class="right-column">
+            <div class="right-column flex items-center">
                 <div>
                     <h2>About Me</h2>
 
-                    <p>Sophomore at UC Irvine proficient in Java, C++, and Python through rigorous coursework, internships, and hands-on
-            projects. Skilled in Adobe Creative Suite, with experience in digital marketing and media development. Exceptional
-            communication skills, meticulous attention to detail, and ability to thrive in a team environment. </p>
+                    <p>I’m a sophomore at UC Irvine with experience in Java, C++, and Python 
+                        through rigorous coursework, internships, and hands-on projects. I have 
+                        a strong interest in web development, with experience building applications 
+                        using Django and Flask. I also bring a background in digital marketing 
+                        and media development, with proficiency in Adobe Creative Suite. I love 
+                        building things that turn ideas into real, usable products!
+                    </p>
                 </div>
                 
             </div>
@@ -73,7 +83,7 @@
                 <h2 class="mb-7">Skills</h2>
                 <div class="contents">
                     {#each chunckedSkillEnteries as skillChunk, i}
-                        <div class="container">
+                        <div class="flex-container">
 
                         {#each skillChunk as [skill_name, value], i}
                             <SkillsPreview 
@@ -82,13 +92,11 @@
                                 expertise_rating={value.expertise}
                             />
                             {#if i%2 == 0}
-                                <div style="width:80px"></div>
+                                <div class="h-[30px] lg:w-[80px]"></div>
                             {/if}
                         {/each}
                         
-                        {#if i < chunckedSkillEnteries.length-1}
-                            <div style="height:80px"></div>
-                        {/if}
+                        <div class="h-[30px] lg:h-[80px]"></div>
                             
                         </div>
                     {/each}
@@ -100,20 +108,23 @@
             <hr/>
         </div>
 
-        <section id="portfolio" class="general-section container">
+        <section id="portfolio" class="general-section flex-container">
             <div class="each-section">
                 <h2>Portfolio</h2>
-                {#each chunckedProjectEnteries as projectChunk, i}
-                    <div class="contents" style="display:flex; flex-direction: rows; ">
-                        {#each projectChunk as [title, contents], i}
+                {#each chunckedProjectEnteries2 as projectChunk, i}
+                <!-- 15px 20px 0px 20px;  -->
+                    <div class="w-[100%] pt:[15px] pb:[0px] pl:[20px] pr:[20px] block flex-row lg:flex">
+                        {#each projectChunk as project, i}
                             <ProjectPreview direction={i%2 == 0 ? "left" : "right"}
-                                            title={title}
-                                            start_date={contents.start_date}
-                                            end_date={contents.end_date}
-                                            project_type={contents.project_type}
-                                            short_description={contents.short_description}
-                                            skills={contents.skills}
-                                            slug={contents.slug}/>
+                                            title={project.title}
+                                            startDate={project.startDate}
+                                            endDate={project.endDate}
+                                            projectType={project.projectType}
+                                            shortDescription="idk lol"
+                                            skills={project.skills}
+                                            slug={project.slug.current}
+                                            cover={project.cover}
+                                            assetsPath={project.assetsPath}/>
                         {/each}
                     </div>
                 {/each}
