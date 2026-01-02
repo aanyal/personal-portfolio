@@ -23,7 +23,6 @@
     width: 100%; 
     border-radius: 5px; 
     border: none; 
-    margin-top: 25px;
 }
 
 /* Project Details in index.html */
@@ -42,4 +41,7 @@
 .project-details .right-column {
     height: 85vh;
     overflow: scroll;
+}
+
+@media (max-width: 1000px) {
 }

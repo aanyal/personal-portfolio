@@ -20,10 +20,10 @@
 </script>
 
 <a href="projects/{slug}">
-    <div class={`${direction === 'left' ? 'mr-[0px] lg:mr-[15px]' : 'ml-[0px] lg:ml-[15px]'} project-container`}>
+    <div class={`${direction === 'left' ? 'mr-[0px] lg:mr-[15px]' : 'ml-[0px] lg:ml-[15px]'} project-container mt-[15px] lg:mt-[0px]`}>
 
         <div class="center-contents">
-            <div style="width: 90%">
+            <div class="pt-[20px] pl-[20px] pr-[20px]">
                 {#if cover.isVideo}
                     <video autoplay loop muted class="banner-image">
                         <source src={asset(assetsPath + '/' + cover.visuals)} type="video/mp4" />
@@ -33,20 +33,21 @@
                 {/if}
 
                 <h3 class="pt-3"> {title} </h3>
-                <p style="font-size: 14px; margin-bottom: 7px; color: #cfcfcf">{projectType} • {monthNames[new Date(startDate).getMonth()] 
-                                                                                                + " " + 
-                                                                                                new Date(startDate).getFullYear()} 
-                                                                                                
-                                                                                                - 
+                <p class="!text-[14px] !mb-[7px] !text-[#cfcfcf]">
+                    {projectType} • {monthNames[new Date(startDate).getMonth()] 
+                    + " " + 
+                    new Date(startDate).getFullYear()} 
+                    
+                    - 
 
-                                                                                                {(endDate.present) ? "Present" : 
-                                                                                                monthNames[new Date(endDate.endDate).getMonth()] 
-                                                                                                + " " + 
-                                                                                                new Date(endDate.endDate).getFullYear()}</p>
+                    {(endDate.present) ? "Present" : 
+                    monthNames[new Date(endDate.endDate).getMonth()] 
+                    + " " + 
+                    new Date(endDate.endDate).getFullYear()}</p>
 
-                <p style="margin-bottom: 5px"> {shortDescription} </p>
+                <p class="mb-[5px]"> {shortDescription} </p>
 
-                <div style="display:flex; flex-wrap: wrap">
+                <div class="flex flex-wrap">
                     {#each skills as skill}
                         <Label skill_name={skill}/>
                     {/each}
