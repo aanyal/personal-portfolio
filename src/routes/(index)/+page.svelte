@@ -4,7 +4,6 @@
     import SkillsPreview from "./SkillsPreview.svelte";
     import ProjectPreview from "./ProjectPreview.svelte";
     import Header from "../Header.svelte";
-    import LineBreak from "../LineBreak.svelte";
     import Label from "../Label.svelte";
 
     import eachSkill from '../../display-data/skills-data.json';
@@ -23,7 +22,6 @@
      * @returns {Array<Array<Object>>} The chunked array.
      */
     function chunkData(arr, size) {
-        // console.log(skillEnteries);
         const chunkedArray = [];
         for (let i = 0; i < arr.length; i += size) {
             chunkedArray.push(arr.slice(i, i + size))
@@ -37,8 +35,6 @@
     let data = $props();
     let projectData = data.data.data;
     const chunckedProjectEnteries2 = chunkData(projectData, 2);
-    console.log(projectData[0].endDate);
-    console.log(chunkData(projectData, 2));
 </script>
 
 <div class="name-section" id="home">

@@ -3,6 +3,7 @@
     import { browser } from '$app/environment';
 
     const coords = { x: 0, y: 0 };
+
     let inactivityTimer;
     const INACTIVITY_THRESHOLD = 15;
 
@@ -27,6 +28,7 @@
                 circle.style.opacity = 1;       //ensure everything is visible when the mouse is moving
             });
             inactivityTimer = setTimeout(hideElement, INACTIVITY_THRESHOLD); //set a 40ms timer
+            console.log(typeof(inactivityTimer));
         }
     }
     

@@ -19,7 +19,7 @@
 
 {#if details != "none"}
 <div class="project-details">
-    <div class="flex mt-[120px] ml-[30px] mb-[30px] mr-[30px]">
+    <div class="block lg:flex mt-[100px] lg:mt-[120px] ml-[30px] mb-[30px] mr-[30px]">
         <div class="left-column">
             <div class="left-section">
                 <p class="mb-[10px]">
@@ -54,20 +54,26 @@
                 
                 <p>{details.projectType}</p>
 
-                <br/>
+                <div class="center-contents mt-[20px] mb-[20px] lg:mb-[0px]">
+                    <hr class="w-[100%]"/>
+                </div>
 
-                {#each details.content as each_subheading}
-                    {#if each_subheading.isHeading}
-                        <a href="#{each_subheading.heading}">--- {each_subheading.heading}</a>
+                <div class="hidden lg:block">
+                    <br/>
+                    {#each details.content as each_subheading}
+                        {#if each_subheading.isHeading}
+                            <a href="#{each_subheading.heading}">--- {each_subheading.heading}</a>
 
-                        <br>
-                    {:else}
-                        <div class="ml-[40px] mb-[0px] mt-[0px] flex">
-                            <p class="mr-[10px]">- </p>
-                            <a href="#{each_subheading.heading}">{each_subheading.heading}</a>
-                        </div>
-                    {/if}
-                {/each}
+                            <br>
+                        {:else}
+                            <div class="ml-[40px] mb-[0px] mt-[0px] flex">
+                                <p class="mr-[10px]">- </p>
+                                <a href="#{each_subheading.heading}">{each_subheading.heading}</a>
+                            </div>
+                        {/if}
+                    {/each}
+                </div>
+
             </div>
         </div>
 
