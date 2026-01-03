@@ -3,6 +3,7 @@
 	import type { PageData } from './$types';
     import {PortableText} from '@portabletext/svelte'
     import { asset } from '$app/paths';
+  import { onMount } from 'svelte';
 
 	interface Props {
 		data: PageData;
@@ -15,7 +16,15 @@
 
     let data = $props();
     let details = data.data.pageData;
+
+    let innerWidth = $state(0);
+    let innerHeight = $state(0);
 </script>
+
+<!-- Bind the window properties to your variables -->
+<svelte:window bind:innerWidth bind:innerHeight />
+
+<!-- Displaying the values in your markup -->
 
 {#if details != "none"}
 <div class="project-details">
@@ -89,8 +98,8 @@
                         {/if}
 
                         {#if each_subheading.visuals.hasVisuals}
-                            <div class="flex flex-row mt-[10px] mb-[25px]">
-                                <div style="width: {each_subheading.visuals.size}%">
+                            <div class="block md:flex flex-row mt-[10px] mb-[25px]">
+                                <div style="{innerWidth < 768 ? 'width: 100%' : 'width:' + each_subheading.visuals.size + '%'}">
                                     {#if each_subheading.visuals.isVideo}
                                         <video autoplay loop muted class="banner-image ">
                                             <source src={asset(details.assetsPath + '/' + each_subheading.visuals.path)} type="video/mp4" />
@@ -99,7 +108,7 @@
                                         <img src={asset(details.assetsPath + '/' + each_subheading.visuals.path)} alt="{each_subheading.heading}" class="rounded-md"/>
                                     {/if}
                                 </div>
-                                <div style="width: {100 - each_subheading.visuals.size}%;" class="ml-[20px] flex items-center">
+                                <div style="{innerWidth < 768 ? 'width: 100%' : 'width:' + (100-each_subheading.visuals.size) + '%'}" class="ml-[0px] md:ml-[20px] flex items-center mt-[15px] md:mt-[0px]">
                                     <PortableText value={each_subheading.text}/>
                                 </div>
                             </div>

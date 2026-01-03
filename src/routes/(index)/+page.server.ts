@@ -14,7 +14,8 @@ const fetchPage = async () => {
 			skills,
 			cover,
 			content,
-			assetsPath
+			assetsPath,
+			overview
 		}
   	`);
 

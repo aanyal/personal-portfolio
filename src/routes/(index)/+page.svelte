@@ -115,7 +115,7 @@
                                             startDate={project.startDate}
                                             endDate={project.endDate}
                                             projectType={project.projectType}
-                                            shortDescription="idk lol"
+                                            shortDescription={project.overview}
                                             skills={project.skills}
                                             slug={project.slug.current}
                                             cover={project.cover}
